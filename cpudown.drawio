@@ -1,9 +1,30 @@
-<mxfile host="app.diagrams.net" modified="2024-03-21T04:51:40.802Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" version="24.0.7" etag="6LF9ZIL5Ficq1tn0aEIt" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-21T05:45:29.708Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="5eg8Vzj9umUSWI0z_Qsw" version="24.0.7" type="github">
   <diagram name="第 1 页" id="pjOkcReL81XWh3SlLAwN">
-    <mxGraphModel>
+    <mxGraphModel dx="2061" dy="1740" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="pkQL5LsBE871X-KeNn5A-4" value="_cpu_down" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="-340" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkQL5LsBE871X-KeNn5A-5" value="cpuhp_kick_ap_work" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="-260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkQL5LsBE871X-KeNn5A-6" value="cpuhp_kick_ap" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="-260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkQL5LsBE871X-KeNn5A-8" value="__cpuhp_kick_ap" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="-110" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkQL5LsBE871X-KeNn5A-9" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;st-&amp;gt;should_run = true;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;wake_up_process(st-&amp;gt;thread);&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;wait_for_ap_thread(st, st-&amp;gt;bringup);&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="-110" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkQL5LsBE871X-KeNn5A-10" value="&lt;div&gt;static struct smp_hotplug_thread cpuhp_threads = {&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;.store = &amp;amp;cpuhp_state.thread,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;.create = &amp;amp;cpuhp_create,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;.thread_should_run = cpuhp_should_run,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;.thread_fn = cpuhp_thread_fun,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;.thread_comm = &quot;cpuhp/%u&quot;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;.selfparking = true,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;};&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBorderColor=default;labelBackgroundColor=#9AC7BF;" vertex="1" parent="1">
+          <mxGeometry x="380" y="-540" width="310" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="pkQL5LsBE871X-KeNn5A-12" value="cpuhp_thread_fun" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="-120" width="60" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
